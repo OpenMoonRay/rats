@@ -6,15 +6,8 @@
 # each mip level.  This allows us to see how mip levels are determined
 # by the mip selector (or even the differential) algorithms.
 
-if(IsDarwinPlatform) # macOS
-    add_rats_test(
-        INPUTS scene.rdla
-        CANONICALS scene.exr
-        DISABLED_XPU # MOONRAY-6156
-    )
-else()
-    add_rats_test(
-        INPUTS scene.rdla
-        CANONICALS scene.exr
-    )
-endif()
+add_rats_test(
+    INPUTS scene.rdla
+    CANONICALS scene.exr
+)
+
