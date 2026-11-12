@@ -10,3 +10,4 @@ add_rats_test(
     INPUTS scene.rdla
     CANONICALS scene.exr
 )
+

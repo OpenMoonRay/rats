@@ -24,7 +24,7 @@ authors = [
 
 requires = [
     'openimageio',
-    'cmake-3.23',
+    'cmake-3.24+<4',
 ]
 
 build_command = ("[ {install} ] && "

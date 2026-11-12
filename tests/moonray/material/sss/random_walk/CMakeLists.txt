@@ -3,9 +3,15 @@
 
 # This tests random_walk Path Traced SSS.
 
-add_rats_test(
-    INPUTS scene.rdla
-    CANONICALS
-        scene.exr
-)
-
+if(IsDarwinPlatform) # macOS
+    add_rats_test(
+        INPUTS scene.rdla
+        CANONICALS scene.exr
+        DISABLED_XPU DISABLED_VECTOR # MOONRAY-6157
+    )
+else()
+    add_rats_test(
+        INPUTS scene.rdla
+        CANONICALS scene.exr
+    )
+endif()
